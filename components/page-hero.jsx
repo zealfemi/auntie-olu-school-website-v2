@@ -1,11 +1,12 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/site-path";
 
 export function PageHero({ eyebrow, title, text, image, imageAlt = "" }) {
   return (
     <section className="page-hero">
       <Image
         className="page-hero-photo"
-        src={image}
+        src={assetPath(image)}
         alt={imageAlt}
         fill
         sizes="100vw"

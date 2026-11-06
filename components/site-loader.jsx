@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { assetPath } from "@/lib/site-path";
 
 export default function SiteLoader() {
   const [visible, setVisible] = useState(true);
@@ -22,7 +23,7 @@ export default function SiteLoader() {
       <span className="loader-halo" aria-hidden="true" />
       <Image
         className="loader-badge"
-        src="/images/auntie-olu-school-badge.png"
+        src={assetPath("/images/auntie-olu-school-badge.png")}
         alt="Auntie Olu School badge"
         width={160}
         height={160}

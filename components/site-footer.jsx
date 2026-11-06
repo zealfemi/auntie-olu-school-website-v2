@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { schoolData } from "@/lib/school-data";
+import { assetPath } from "@/lib/site-path";
 import { Icon } from "@/components/icons";
 
 const links = [
@@ -18,7 +19,7 @@ export function SiteFooter() {
           <Link href="/" className="footer-brand">
             <span className="footer-seal">
               <Image
-                src="/images/auntie-olu-school-badge.png"
+                src={assetPath("/images/auntie-olu-school-badge.png")}
                 alt=""
                 width={62}
                 height={62}

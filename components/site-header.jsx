@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { schoolData } from "@/lib/school-data";
+import { assetPath } from "@/lib/site-path";
 import { Icon } from "@/components/icons";
 
 const navigation = [
@@ -39,7 +40,7 @@ export function SiteHeader() {
           onClick={() => setMenuOpen(false)}>
           <span className="brand-seal">
             <Image
-              src="/images/auntie-olu-school-badge.png"
+              src={assetPath("/images/auntie-olu-school-badge.png")}
               alt=""
               width={76}
               height={76}

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { PageHero } from "@/components/page-hero";
 import { Icon } from "@/components/icons";
 import { schoolData } from "@/lib/school-data";
+import { assetPath } from "@/lib/site-path";
 
 export const metadata = { title: "About our school" };
 
@@ -29,7 +30,7 @@ export default function AboutPage() {
             <span className="story-ring story-ring-two" />
             <div className="story-badge">
               <Image
-                src="/images/auntie-olu-school-badge.png"
+                src={assetPath("/images/auntie-olu-school-badge.png")}
                 alt="Auntie Olu Nursery and Primary School badge"
                 width={310}
                 height={310}

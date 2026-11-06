@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { schoolData } from "@/lib/school-data";
 import { Icon } from "@/components/icons";
+import { assetPath } from "@/lib/site-path";
 
 const highlights = [
   ["10+ years", "Growing young minds"],
@@ -52,7 +53,7 @@ export default function HomePage() {
             <span className="hero-sunburst" aria-hidden="true" />
             <div className="hero-image-frame">
               <Image
-                src="/images/students-001.jpg"
+                src={assetPath("/images/students-001.jpg")}
                 alt="Pupils gathered together at Auntie Olu School"
                 fill
                 priority
@@ -98,7 +99,7 @@ export default function HomePage() {
           <div className="welcome-visual">
             <div className="welcome-image-main">
               <Image
-                src="/images/awards-013.jpg"
+                src={assetPath("/images/awards-013.jpg")}
                 alt="A teacher and pupils sharing a school moment"
                 fill
                 sizes="(max-width: 900px) 100vw, 45vw"
@@ -106,7 +107,7 @@ export default function HomePage() {
             </div>
             <div className="welcome-seal">
               <Image
-                src="/images/auntie-olu-school-badge.png"
+                src={assetPath("/images/auntie-olu-school-badge.png")}
                 alt="Auntie Olu Nursery and Primary School badge"
                 width={106}
                 height={106}
@@ -187,9 +188,9 @@ export default function HomePage() {
               controls
               playsInline
               preload="metadata"
-              poster="/images/teacher-students-001.jpg"
+              poster={assetPath("/images/teacher-students-001.jpg")}
               aria-label="A short video from Auntie Olu Nursery and Primary School">
-              <source src="/videos/video-001.mp4" type="video/mp4" />
+              <source src={assetPath("/videos/video-001.mp4")} type="video/mp4" />
               Your browser does not support the video element.
             </video>
             <span className="video-caption">
@@ -225,7 +226,7 @@ export default function HomePage() {
                 className={`preview-photo ${className}`}
                 key={src}>
                 <Image
-                  src={src}
+                  src={assetPath(src)}
                   alt={alt}
                   fill
                   sizes="(max-width: 700px) 100vw, 40vw"
